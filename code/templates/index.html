@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="HTML">
+
+<head>
+    <title>Bank Portals - Single User Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {#PermissionsFormsSimplifier created by @drxcu Vlad Prigoreanu for Bogdan Stefan at Uniper SE#}
+</head>
+
+<body>
+<h1>Bank Portals - Single User Form</h1>
+
+<form method="POST" action="{{ url_for('fill_pdf') }}">
+
+    <script>
+        function showPermissions() {
+            var dropdown = document.getElementById("dropdown1");
+            var permissionsHeader = document.getElementById("permissions-header");
+            var permissions = document.getElementById("permissions");
+
+            // Clear existing checkboxes
+            permissions.innerHTML = "";
+
+
+            // Show the appropriate checkboxes based on the selected option
+            if (dropdown.value === "C&I - SEB") {
+                permissionsHeader.style.display = "block";
+                permissions.innerHTML = `
+            <div class="seb">
+            <div class="permission1"><label for="permission1">Cancel payment (CNCL)</label></div>
+            <div class="permission1field"><input type="checkbox" name="permission1" id="permission1"></div>
+            <div class="permission2"><label for="permission2">Cash pool payment (CPP)</label></div>
+            <div class="permission2field"><input type="checkbox" name="permission2" id="permission2"></div>
+            <div class="permission3"><label for="permission3">Domestic payment (DOM)</label></div>
+            <div class="permission3field"><input type="checkbox" name="permission3" id="permission3"></div>
+            <div class="permission4"><label for="permission4">Account information (INF)</label></div>
+            <div class="permission4field"><input type="checkbox" name="permission4" id="permission4"></div>
+            <div class="permission5"><label for="permission5">International payment (INT)</label></div>
+            <div class="permission5field"><input type="checkbox" name="permission5" id="permission5"></div>
+            <div class="permission6"><label for="permission6">Salary payment (SAL)</label></div>
+            <div class="permission6field"><input type="checkbox" name="permission6" id="permission6"></div>
+            <div class="permission7"><label for="permission7">View BG Credit forecast (BGF)</label></div>
+            <div class="permission7field"><input type="checkbox" name="permission7" id="permission7"></div>
+            <div class="permission8"><label for="permission8">Import payment (IMPM)</label></div>
+            <div class="permission8field"><input type="checkbox" name="permission8" id="permission8"></div>
+            <div class="permission9"><label for="permission9">Get Report (REP)</label></div>
+            <div class="permission9field"><input type="checkbox" name="permission9" id="permission9"></div>
+            <div class="permission10"><label for="permission10">Register payments (REG)</label></div>
+            <div class="permission10field"><input type="checkbox" name="permission10" id="permission10"></div>
+            <div class="permission11"><label for="permission11">Payment search extended (EXT)</label></div>
+            <div class="permission11field"><input type="checkbox" name="permission11" id="permission11"></div>
+            <div class="permission12"><label for="permission12">TBP limit edit (ELG)</label></div>
+            <div class="permission12field"><input type="checkbox" name="permission12" id="permission12"></div>
+            <div class="permission13"><label for="permission13">TBP limit edit (VLG)</label></div>
+            <div class="permission13field"><input type="checkbox" name="permission13" id="permission13"></div>
+            <div class="permission14"><label for="permission14">Administrator (ADM)</label></div>
+            <div class="permission14field"><input type="checkbox" name="permission14" id="permission14"></div>
+            <div class="permission15"><label for="permission15">Signatory (SIG)</label></div>
+            <div class="permission15field"><input type="checkbox" name="permission15" id="permission15"></div>
+            </div>
+        `;
+            } else if (dropdown.value === "CBO - Lloyds") {
+                permissionsHeader.style.display = "block";
+                permissions.innerHTML = `
+            <div class="lloyds">
+            <div class="permission16"><label for="permission16">UFS Approve Payments Templates Import Maps and Benef Library (UFSAPRO)</label></div>
+            <div class="permission16field"><input type="checkbox" name="permission16" id="permission16"></div>
+            <div class="permission17"><label for="permission17">UFS Create Payments Templates Import Maps and Benef Library (UFSCREAT)</label></div>
+            <div class="permission17field"><input type="checkbox" name="permission17" id="permission17"></div>
+            <div class="permission18"><label for="permission18">Create Approver 1 (Approve1)</label></div>
+            <div class="permission18field"><input type="checkbox" name="permission18" id="permission18"></div>
+            <div class="permission19"><label for="permission19">Category 2 approver (Approver2)</label></div>
+            <div class="permission19field"><input type="checkbox" name="permission19" id="permission19"></div>
+            <div class="permission20"><label for="permission20">Balance and Transactions (VIEWONLY)</label></div>
+            <div class="permission20field"><input type="checkbox" name="permission20" id="permission20"></div>
+            <div class="permission21"><label for="permission21">Approve Payments Template Import Maps and Beneficiary Library (Approver)</label></div>
+            <div class="permission21field"><input type="checkbox" name="permission21" id="permission21"></div>
+            <div class="permission22"><label for="permission22">UFS View Balances and Transaction (UFSVIEW)</label></div>
+            <div class="permission22field"><input type="checkbox" name="permission22" id="permission22"></div>
+            <div class="permission23"><label for="permission23">BANK MAINTAINED (ADMIN)</label></div>
+            <div class="permission23field"><input type="checkbox" name="permission23" id="permission23"></div>
+            </div>
+        `;
+            } else if (dropdown.value === "RBS Bank") {
+                permissionsHeader.style.display = "block";
+                permissions.innerHTML = `
+            <div class="rbs">
+            <div class="permission24"><label for="permission24">Administrator</label></div>
+            <div class="permission24field"><input type="checkbox" name="permission24" id="permission24"></div>
+            <div class="permission25"><label for="permission25">Balance Operator</label></div>
+            <div class="permission25field"><input type="checkbox" name="permission25" id="permission25"></div>
+            <div class="permission26"><label for="permission26">Treasury</label></div>
+            <div class="permission26field"><input type="checkbox" name="permission26" id="permission26"></div>
+            <div class="permission27"><label for="permission27">Uniper Account Operator</label></div>
+            <div class="permission27field"><input type="checkbox" name="permission27" id="permission27"></div>
+            <div class="permission28"><label for="permission28">Key ALL Pymts</label></div>
+            <div class="permission28field"><input type="checkbox" name="permission28" id="permission28"></div>
+            <div class="permission29"><label for="permission29">Directors</label></div>
+            <div class="permission29field"><input type="checkbox" name="permission29" id="permission29"></div>
+            <div class="permission30"><label for="permission30">Template Checker</label></div>
+            <div class="permission30field"><input type="checkbox" name="permission30" id="permission30"></div>
+            <div class="permission31"><label for="permission31">Banking 1st Authorizer</label></div>
+            <div class="permission31field"><input type="checkbox" name="permission31" id="permission31"></div>
+            </div>
+        `;
+            } else {
+                permissionsHeader.style.display = "none";
+            }
+        }
+    </script>
+
+
+    <h2>Request Option</h2>
+    <div class="request">
+        <div class="application"><label for="dropdown1">Application:</label></div>
+        <div class="applicationfield"><select name="dropdown1" id="dropdown1" onchange="showPermissions()" class="applicationfieldact">
+            <option value=""></option>
+            <option value="C&I - SEB">C&I - SEB</option>
+            <option value="CBO - Lloyds">CBO - Lloyds</option>
+            <option value="RBS Bank">RBS Bank</option>
+        </select></div>
+
+        <div class="option"><label for="dropdown2">Option:</label></div>
+        <div class="optionfield"><select name="dropdown2" id="dropdown2" class="optionfieldact">
+            <option value=""></option>
+            <option value="new">new</option>
+            <option value="recreate">recreate</option>
+            <option value="change/edit">change/edit</option>
+            <option value="remove">remove</option>
+        </select></div>
+    </div>
+
+    <h2>User Information</h2>
+    <div class="user">
+        <div class="userid"><label for="userid">User ID:</label></div>
+        <div class="useridfield"><input type="text" name="userid" id="useridfield"></div>
+
+        <div class="email"><label for="email">E-Mail:</label></div>
+        <div class="emailfield"><input type="text" name="email" id="email"></div>
+
+        <div class="firstname"><label for="firstname">First Name:</label></div>
+        <div class="firstnamefield"><input type="text" name="firstname" id="firstname"></div>
+
+        <div class="lastname"><label for="lastname">Last Name:</label></div>
+        <div class="lastnamefield"><input type="text" name="lastname" id="lastname"></div>
+    </div>
+
+    <h2>Reference User</h2>
+    <div class="reference">
+        <div class="firstnamelastname"><label for="firstnamelastname">First Name, Last Name:</label></div>
+        <div class="firstnamelastnamefield"><input type="text" name="firstnamelastname" id="firstnamelastname"></div>
+
+        <div class="emailadresse"><label for="emailadresse">E-Mail-Adresse:</label></div>
+        <div class="emailadressefield"><input type="text" name="emailadresse" id="emailadresse"></div>
+
+        <div class="kid"><label for="kid">KID:</label></div>
+        <div class="kidfield"><input type="text" name="kid" id="kid"></div>
+    </div>
+
+    <h2>Comments</h2>
+    <div class="commentsdiv">
+        <input type="text" name="comments" id="comments" class="comments">
+    </div>
+
+    <h2 id="permissions-header">Permissions rules</h2>
+    <div class="permissions">
+        <div id="permissions">
+        </div>
+    </div>
+
+    <input type="submit" value="Generate PDF" class="submit">
+</form>
+
+</body>
+</html>
