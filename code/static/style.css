@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
+/* PermissionsFormsSimplifier created by @drxcu Vlad Prigoreanu for Bogdan Stefan at Uniper SE */
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  background: linear-gradient(to right, #1A2980, #26D0CE);
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #eeeeee;
+  text-align: center;
+}
+
+.request {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-bottom: 20px;
+}
+
+.application {
+  padding-right: 5px;
+  text-align: right;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.applicationfield {
+  padding-left: 5px;
+  text-align: left;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.applicationfieldact{
+  width: 145px;
+}
+
+.option {
+  padding-right: 5px;
+  text-align: right;
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.optionfield {
+  padding-left: 5px;
+  text-align: left;
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+}
+
+.optionfieldact {
+  width: 145px;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-bottom: 20px;
+}
+
+.userid {
+  padding-right: 5px;
+  text-align: right;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.useridfield {
+  padding-left: 5px;
+  text-align: left;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.email {
+  padding-right: 5px;
+  text-align: right;
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.emailfield {
+  padding-left: 5px;
+  text-align: left;
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+}
+
+.firstname {
+  padding-right: 5px;
+  text-align: right;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.firstnamefield {
+  padding-left: 5px;
+  text-align: left;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.lastname {
+  padding-right: 5px;
+  text-align: right;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.lastnamefield {
+  padding-left: 5px;
+  text-align: left;
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+.reference {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-bottom: 20px;
+}
+
+.firstnamelastname {
+  padding-right: 5px;
+  text-align: right;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.firstnamelastnamefield {
+  padding-left: 5px;
+  text-align: left;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.emailadresse {
+  padding-right: 5px;
+  text-align: right;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.emailadressefield {
+  padding-left: 5px;
+  text-align: left;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.kid {
+  padding-right: 5px;
+  text-align: right;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.kidfield {
+  padding-left: 5px;
+  text-align: left;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.commentsdiv {
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-bottom: 20px;
+}
+
+.comments {
+  height: 50px;
+  width: 40%;
+}
+
+.seb {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  padding-left: 20%;
+  padding-right: 20%;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  padding-bottom: 20px;
+}
+.permissions1 { grid-area: 1 / 1 / 2 / 2; padding-right: 5px; text-align: right;}
+.permissions1field { grid-area: 1 / 2 / 2 / 3; padding-left: 5px; text-align: left;}
+.permissions2 { grid-area: 1 / 3 / 2 / 4; padding-right: 5px; text-align: right;}
+.permissions2field { grid-area: 1 / 4 / 2 / 5; padding-left: 5px; text-align: left;}
+.permissions3 { grid-area: 1 / 5 / 2 / 6; padding-right: 5px; text-align: right;}
+.permissions3field { grid-area: 1 / 6 / 2 / 7; padding-left: 5px; text-align: left;}
+.permissions4 { grid-area: 2 / 1 / 3 / 2; padding-right: 5px; text-align: right;}
+.permissions4field { grid-area: 2 / 2 / 3 / 3; padding-left: 5px; text-align: left;}
+.permissions5 { grid-area: 2 / 3 / 3 / 4; padding-right: 5px; text-align: right;}
+.permissions5field { grid-area: 2 / 4 / 3 / 5; padding-left: 5px; text-align: left;}
+.permissions6 { grid-area: 2 / 5 / 3 / 6; padding-right: 5px; text-align: right;}
+.permissions6field { grid-area: 2 / 6 / 3 / 7; padding-left: 5px; text-align: left;}
+.permissions7 { grid-area: 3 / 1 / 4 / 2; padding-right: 5px; text-align: right;}
+.permissions7field { grid-area: 3 / 2 / 4 / 3; padding-left: 5px; text-align: left;}
+.permissions8 { grid-area: 3 / 3 / 4 / 4; padding-right: 5px; text-align: right;}
+.permissions8field { grid-area: 3 / 4 / 4 / 5; padding-left: 5px; text-align: left;}
+.permissions9 { grid-area: 3 / 5 / 4 / 6; padding-right: 5px; text-align: right;}
+.permissions9field { grid-area: 3 / 6 / 4 / 7; padding-left: 5px; text-align: left;}
+.permissions10 { grid-area: 4 / 1 / 5 / 2; padding-right: 5px; text-align: right;}
+.permissions10field { grid-area: 4 / 2 / 5 / 3; padding-left: 5px; text-align: left;}
+.permissions11 { grid-area: 4 / 3 / 5 / 4; padding-right: 5px; text-align: right;}
+.permissions11field { grid-area: 4 / 4 / 5 / 5; padding-left: 5px; text-align: left;}
+.permissions12 { grid-area: 4 / 5 / 5 / 6; padding-right: 5px; text-align: right;}
+.permissions12field { grid-area: 4 / 6 / 5 / 7; padding-left: 5px; text-align: left;}
+.permissions13 { grid-area: 5 / 1 / 6 / 2; padding-right: 5px; text-align: right;}
+.permissions13field { grid-area: 5 / 2 / 6 / 3; padding-left: 5px; text-align: left;}
+.permissions14 { grid-area: 5 / 3 / 6 / 4; padding-right: 5px; text-align: right;}
+.permissions14field { grid-area: 5 / 4 / 6 / 5; padding-left: 5px; text-align: left;}
+.permissions15 { grid-area: 5 / 5 / 6 / 6; padding-right: 5px; text-align: right;}
+.permissions15field { grid-area: 5 / 6 / 6 / 7; padding-left: 5px; text-align: left;}
+
+.lloyds {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  padding-left: 25%;
+  padding-right: 25%;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  padding-bottom: 20px;
+}
+.permissions16 { grid-area: 1 / 1 / 2 / 2; padding-right: 5px; text-align: right;}
+.permissions16field { grid-area: 1 / 2 / 2 / 3; padding-left: 5px; text-align: left;}
+.permissions17 { grid-area: 1 / 3 / 2 / 4; padding-right: 5px; text-align: right;}
+.permissions17field { grid-area: 1 / 4 / 2 / 5; padding-left: 5px; text-align: left;}
+.permissions18 { grid-area: 2 / 1 / 3 / 2; padding-right: 5px; text-align: right;}
+.permissions18field { grid-area: 2 / 2 / 3 / 3; padding-left: 5px; text-align: left;}
+.permissions19 { grid-area: 2 / 3 / 3 / 4; padding-right: 5px; text-align: right;}
+.permissions19field { grid-area: 2 / 4 / 3 / 5; padding-left: 5px; text-align: left;}
+.permissions20 { grid-area: 3 / 1 / 4 / 2; padding-right: 5px; text-align: right;}
+.permissions20field { grid-area: 3 / 2 / 4 / 3; padding-left: 5px; text-align: left;}
+.permissions21 { grid-area: 3 / 3 / 4 / 4; padding-right: 5px; text-align: right;}
+.permissions21field { grid-area: 3 / 4 / 4 / 5; padding-left: 5px; text-align: left;}
+.permissions22 { grid-area: 4 / 1 / 5 / 2; padding-right: 5px; text-align: right;}
+.permissions22field { grid-area: 4 / 2 / 5 / 3; padding-left: 5px; text-align: left;}
+.permissions23 { grid-area: 4 / 3 / 5 / 4; padding-right: 5px; text-align: right;}
+.permissions23field { grid-area: 4 / 4 / 5 / 5; padding-left: 5px; text-align: left;}
+
+.rbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  padding-left: 25%;
+  padding-right: 25%;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  padding-bottom: 20px;
+}
+.permissions24 { grid-area: 1 / 1 / 2 / 2; padding-right: 5px; text-align: right;}
+.permissions24field { grid-area: 1 / 2 / 2 / 3; padding-left: 5px; text-align: left;}
+.permissions25 { grid-area: 1 / 3 / 2 / 4; padding-right: 5px; text-align: right;}
+.permissions25field { grid-area: 1 / 4 / 2 / 5; padding-left: 5px; text-align: left;}
+.permissions26 { grid-area: 2 / 1 / 3 / 2; padding-right: 5px; text-align: right;}
+.permissions26field { grid-area: 2 / 2 / 3 / 3; padding-left: 5px; text-align: left;}
+.permissions27 { grid-area: 2 / 3 / 3 / 4; padding-right: 5px; text-align: right;}
+.permissions27field { grid-area: 2 / 4 / 3 / 5; padding-left: 5px; text-align: left;}
+.permissions28 { grid-area: 3 / 1 / 4 / 2; padding-right: 5px; text-align: right;}
+.permissions28field { grid-area: 3 / 2 / 4 / 3; padding-left: 5px; text-align: left;}
+.permissions29 { grid-area: 3 / 3 / 4 / 4; padding-right: 5px; text-align: right;}
+.permissions29field { grid-area: 3 / 4 / 4 / 5; padding-left: 5px; text-align: left;}
+.permissions30 { grid-area: 4 / 1 / 5 / 2; padding-right: 5px; text-align: right;}
+.permissions30field { grid-area: 4 / 2 / 5 / 3; padding-left: 5px; text-align: left;}
+.permissions31 { grid-area: 4 / 3 / 5 / 4; padding-right: 5px; text-align: right;}
+.permissions31field { grid-area: 4 / 4 / 5 / 5; padding-left: 5px; text-align: left;}
+
+.submit {
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-bottom: 20px;
+  width: 145px;
+}
+
+/* Header Styles */
+header {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #333;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Main Content Styles */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+article {
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 20px;
+}
+
+article h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+article p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
